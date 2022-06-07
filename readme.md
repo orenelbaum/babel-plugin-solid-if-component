@@ -1,6 +1,10 @@
 # babel-plugin-solid-if-component
 
-`babel-plugin-solid-if-component` is a Babel for SolidJS plugin that gives you an `If` and `Else` component macros. It compiles to Solid's `Show` component (`Else` goes to the fallback prop) and it gives you an altrnative syntax to the `Show` component that achieve the same conditional rendering behavior. 
+`babel-plugin-solid-if-component` is a Babel for SolidJS plugin that gives you an `<If>` and `<Else>` component macros. It compiles to Solid's `<Show>` component (`<Else>` goes to the fallback prop) and it gives you an altrnative syntax to the `<Show>` component that achieve the same conditional rendering behavior. 
+
+**[Try in Stackblitz](https://stackblitz.com/github/orenelbaum/babel-plugin-solid-if-component-example)**
+
+**[Open example repo in Github](https://github.com/orenelbaum/babel-plugin-solid-if-component-example)**
 
 > **Note**  
 This plugin is WIP.
@@ -39,6 +43,12 @@ const MyComp = () => {
 }
 ```
 
+- The `<If>` component can be used by itself.
+- The `<Else>` component has to always follow an `<If>` component.
+- An else-if syntax is not supported yet but is on the roadmap.
+- Error handling is not fully implemented yet.
+- Errors can also be prvented by an ESLint rule which is also on the roadmap.
+
 ## Getting Started
 
 ```sh
@@ -52,15 +62,20 @@ The first argument this initialization function takes, is the options object.
 Add this field to the initializer options:
 
 ```js
-babel: {
-	plugins: ['babel-plugin-solid-if-component']
-} 
+{
+   babel: {
+      plugins: ['babel-plugin-solid-if-component']
+   } 
+}
 ```
 
 
 ## Roadmap / Missing Features
-- `ElseIf` / `Elif` component
+- `<ElseIf>` / `<Elif>` component
+- Error handling
 - More tests
+- ESLint rule
+- Alternative auto import syntax: `<m:if>` and `<m:else>` (under considaration)
 
 
 
