@@ -1,11 +1,12 @@
-import { Signal, Accessor, Setter } from 'solid-js/types/reactive/signal'
+import { JSX, Show } from 'solid-js'
 
-export declare const $: <Value>(
-   arg: [() => Value, (x: Value) => any] | Value
-) => Value
 
-export declare const $$: <Value>(arg: Value) => Signal<Value>
+export declare const If: <T>(props: {
+   cond: T | undefined | null | false;
+   fallback?: JSX.Element;
+   children: JSX.Element | ((item: NonNullable<T>) => JSX.Element);
+}) => (() => JSX.Element)
 
-export declare const read: <Value>(arg: Value) => Accessor<Value>
-
-export declare const write: <Value>(arg: Value) => Setter<Value>
+export declare const Else:(
+   props: { children: JSX.Element; }
+) => (() => JSX.Element)

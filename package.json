@@ -1,7 +1,7 @@
 {
-  "name": "babel-plugin-reactivars-solid",
-  "version": "0.0.4",
-  "description": "A babel plugin that lets you use a Svelte-like syntax with SolidJS",
+  "name": "babel-plugin-solid-if-component",
+  "version": "0.0.1",
+  "description": "A babel for SolidJS that gives you an <If> and <Else> components which provide an alternative syntax to the <Show> component.",
   "main": "dist/index",
   "types": "index.d.ts",
   "scripts": {
@@ -27,18 +27,20 @@
     "solid-js": "^1.3"
   },
   "license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/orenelbaum/babel-plugin-reactivars-solid"
-	},
-	"author": "Oren Elbaum",
-	"keywords": [
-		"babel",
-		"babel-plugin",
-		"solid",
-		"solid-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orenelbaum/babel-plugin-solid-if-component"
+  },
+  "author": "Oren Elbaum",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "solid",
+    "solid-js",
     "react",
-		"reactivars",
-    "reactive variables"
-	]
+    "if",
+    "else",
+    "show",
+    "conditionals"
+  ]
 }
