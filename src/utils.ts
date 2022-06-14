@@ -9,6 +9,7 @@ export const getGetterMemberExpression =
          true
       )
 
+      
 // Take a string and remove all new lines and whitespaces longer than 1 character
 const removeUnnecessaryWhitespace = (message: string) =>
    message
